@@ -22,10 +22,10 @@ public class MainClassTest extends BaseTest {
 
     @Test(groups = {"Regression"})
     void shouldBeVisibleHistoryPage() {
-        new HistoryTabPage()
-                .searchHistoryButton();
-                assertThat(new HistoryTabPage().firstHeadingHistory()).as("The text must be")
-                        .isEqualTo("Заглавная страница: история изменений");
+
+        String heading = new HistoryTabPage().searchHistoryButton().getHeadingOfHistory();
+        assertThat(heading).as("The text must be")
+                .isEqualTo("Заглавная страница: история изменений");
     }
 
     @DataProvider(name = "search_provider")
