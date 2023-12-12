@@ -10,7 +10,7 @@ public class SearchPage extends BaseMethods {
     private static final By article = By.xpath("//div[@class='mw-search-result-heading']/a[@data-prefixedtext='Ubisoft']");
 
     public SearchPage searchUbisoftArticle(String text) {
-        send(searchInput);
+        send(searchInput,text);
         return this;
     }
 

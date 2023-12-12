@@ -19,7 +19,7 @@ public class BaseMethods {
         waiter(locator, time).click();
     }
 
-    protected void send(By locator) {
+    protected void send(By locator, String text) {
         waiter(locator).sendKeys(text);
     }
 
